@@ -7,4 +7,6 @@
     <color name="orange">#F37021</color>
     <color name="white">#FFF</color>
     <color name="green">#FF4500</color>
+    <color name="facebook">#3b5998</color>
+    <color name="google">#008744</color>
 </resources>

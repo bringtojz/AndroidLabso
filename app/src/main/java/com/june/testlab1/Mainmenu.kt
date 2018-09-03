@@ -1,33 +1,32 @@
 package com.june.testlab1
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_main.*
 
 class Mainmenu : AppCompatActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
+    var mAuth: FirebaseAuth? = null
+    private val TAG : String = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.my_activity_mainmenu)
+        setContentView(R.layout.activity_main)
 
-        viewManager = LinearLayoutManager(this)
-        viewAdapter = MyAdapter(myDataset)
 
-        recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
-            // use this setting to improve performance if you know that changes
-            // in content do not change the layout size of the RecyclerView
-            setHasFixedSize(true)
+        mAuth = FirebaseAuth.getInstance()
 
-            // use a linear layout manager
-            layoutManager = viewManager
-
-            // specify an viewAdapter (see also next example)
-            adapter = viewAdapter
+        if (mAuth!!.currentUser != null){
+            Log.d(TAG , "Continue With" + mAuth!!.currentUser!!.email)
+            startActivity(Intent(this, ResultActivity::class.java))
+            finish()
 
         }
+        btnLoginWithEmail.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
     }
     // ...
 }

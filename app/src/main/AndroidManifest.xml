@@ -16,11 +16,20 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.Main2Activity" />
-        <activity android:name=".Mainmenu"></activity>
+        <activity android:name=".Mainmenu" />
+        <activity android:name=".activities.SplashScreen">
+            android:theme="@style/SplashTheme"
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
