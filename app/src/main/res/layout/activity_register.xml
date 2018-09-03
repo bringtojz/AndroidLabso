@@ -30,7 +30,7 @@
 
 
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtRegisterEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Address"
@@ -39,8 +39,8 @@
             android:padding="10dp"
             android:background="@drawable/input_frame"/>
         <EditText
-            android:id="@+id/edtPassword"
-            android:layout_below="@+id/edtEmail"
+            android:id="@+id/edtRegisterPassword"
+            android:layout_below="@+id/edtRegisterEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -49,14 +49,14 @@
             android:layout_margin="10dp"
             android:padding="10dp"/>
         <Button
-            android:id="@+id/btnLogin"
-            android:layout_below="@id/edtPassword"
+            android:id="@+id/btnCreateAccount"
+            android:layout_below="@id/edtRegisterPassword"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/btn_google"
-            android:text="Login"/>
+            android:text="Register"/>
 
 
 
@@ -68,11 +68,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txvCreateAccount"
+            android:id="@+id/txvSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Create Account"
+            android:text="SIGN IN"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_margin="10dp"/>

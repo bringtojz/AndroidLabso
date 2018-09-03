@@ -9,25 +9,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class Mainmenu : AppCompatActivity() {
 
-    var mAuth: FirebaseAuth? = null
-    private val TAG : String = "MainActivity"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_mainmenu)
 
 
-        mAuth = FirebaseAuth.getInstance()
-
-        if (mAuth!!.currentUser != null){
-            Log.d(TAG , "Continue With" + mAuth!!.currentUser!!.email)
-            startActivity(Intent(this, ResultActivity::class.java))
-            finish()
-
-        }
-        btnLoginWithEmail.setOnClickListener{
-            startActivity(Intent(this, LoginActivity::class.java))
-    }
-    // ...
+}    // ...
 }
-}
+
